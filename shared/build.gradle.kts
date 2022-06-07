@@ -11,9 +11,13 @@ kotlin {
     val xcf = XCFramework()
     listOf(
         iosX64(),
+        watchosX64(),
         iosArm32(),
+        watchosArm32(),
         iosArm64(),
+        watchosArm64(),
         iosSimulatorArm64(),
+        watchosSimulatorArm64(),
     ).forEach {
         it.binaries.framework {
             baseName = "shared"
