@@ -11,6 +11,7 @@ kotlin {
     val xcf = XCFramework()
     listOf(
         iosX64(),
+        iosArm32(),
         iosArm64(),
         iosSimulatorArm64(),
     ).forEach {
