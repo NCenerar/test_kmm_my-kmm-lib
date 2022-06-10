@@ -29,10 +29,18 @@ kotlin {
     }
 
     sourceSets {
+        val androidAndroidTestRelease by getting
+        val androidTestFixtures by getting
+        val androidTestFixturesDebug by getting
+        val androidTestFixturesRelease by getting
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
             }
+            dependsOn(androidAndroidTestRelease)
+            dependsOn(androidTestFixtures)
+            dependsOn(androidTestFixturesDebug)
+            dependsOn(androidTestFixturesRelease)
         }
     }
 }
